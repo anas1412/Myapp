@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage("Fetching Code From GitHub") {
+    stage("Pull") {
       steps {
         script {
           checkout([$class: 'GitSCM',
