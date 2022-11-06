@@ -1,0 +1,10 @@
+- name: log into docker hub registy
+  docker_login:
+    username: anas1412
+    password: anas21541416
+- name: Tag and push to docker hub
+  docker_image:
+    name: devops
+    repository: anas1412/devops
+    push: yes
+    source: local
