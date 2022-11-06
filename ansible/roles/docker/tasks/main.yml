@@ -1,20 +1,18 @@
 ---
-# tasks file for docker
-# tasks file for docker
- - name: create image docker
-   docker image:
-     name: Myapp
-     build:
-      path: /var/lib/jenkins/workspace/Myapp
-      pull: no
-     source: build
-     state: present
-     force_source: true
- - name: run container docker
-   docker_container:
-     name: myapp_container
-     image: Myapp:latest
-     state: started
-     recreate: true
-     ports:
-      - "4200:80"
+- name: create image docker
+  docker_image:
+   name: Myapp
+   build: 
+    path: /var/lib/jenkins/workspace/Myapp
+    pull: no
+   source: build
+   state: present
+   force_source: true
+- name: run container docker
+  docker_container:
+   name: Myapp
+   image: Myapp:latest
+   state: started
+   recreate: true
+   ports:
+    - "4200:80"
