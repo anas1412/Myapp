@@ -10,6 +10,14 @@ pipeline {
 	    }
     }
     
+    stage ('test docker'){
+      steps{
+        script{
+          sh "docker run hello-world"
+        }
+      }
+    }
+    
     stage ('docker'){
       steps{
         script{
