@@ -12,3 +12,8 @@ scrape_configs:
     scrape_interval: 5s
     static_configs:
       - targets: ['192.168.1.55:9323']
+      
+    - job_name: Myapp
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['192.168.1.55:4200']
