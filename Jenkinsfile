@@ -24,14 +24,20 @@ pipeline {
             }
         } 
 
-stage("Grafana") {
+//stage("Grafana") {
+            //steps {
+                //script{
+                    //sh 'ansible-playbook -K ansible/grafana.yml -i ansible/inventory/host.yml'
+                //}
+            //}
+        //}
+    stage("Grafana") {
             steps {
                 script{
-                    sh 'ansible-playbook -K ansible/grafana.yml -i ansible/inventory/host.yml'
+                    sh 'docker-compose up'
                 }
             }
-        }
-
+        } 
 
 
   }
