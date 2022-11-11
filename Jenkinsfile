@@ -24,5 +24,15 @@ pipeline {
             }
         } 
 
+stage("Grafana") {
+            steps {
+                script{
+                    sh 'ansible-playbook -K ansible/grafana.yml -i ansible/inventory/host.yml'
+                }
+            }
+        }
+
+
+
   }
 }

@@ -1,0 +1,27 @@
+---
+- name: run container prometheus
+  prometheus_container:
+   name: prometheus
+   image: prom/prometheus:latest
+   state: started
+   recreate: true
+   ports:
+    - "9090:9090"
+
+- name: run container grafana
+  grafana_container:
+   name: grafana
+   image: grafana/grafana:latest
+   state: started
+   recreate: true
+   ports:
+    - "3000:3000"
+
+- name: run container node-exporter
+  node_exporter_container:
+   name: node_exporter
+   image: prom/node-exporter:latest
+   state: started
+   recreate: true
+   ports:
+    - "9100:9100"
