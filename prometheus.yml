@@ -22,5 +22,5 @@ remote_write:
   - url: "192.168.1.55:9090"
     basic_auth:
       username: "admin"
-      password: "password"
+      password: "eyJrIjoiMlNEVWl5WGtZNDI5RThMWWJRT1NnZllHb21iajJFUTMiLCJuIjoidG9rZW4iLCJpZCI6MX0="
 
