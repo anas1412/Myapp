@@ -29,7 +29,7 @@
     - install
     - upgrade
 
-- name: Remove existing {{ docker_grafana_name }} container
+- name: Remove existing container
   docker:
     docker_api_version: "{{ docker_api_version }}"
     image: "{{ docker_grafana_image }}"
