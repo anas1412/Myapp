@@ -4,7 +4,7 @@
     password: dckr_pat__EvqcsZTtOyXkohCAppx3OvnLgU
 - name: Tag and push to docker hub
   docker_image:
-    name: test
-    repository: anas1412/test
+    name: devops
+    repository: anas1412/devops
     push: yes
     source: local
