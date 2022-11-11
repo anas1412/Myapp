@@ -22,7 +22,21 @@ pipeline {
                     sh 'ansible-playbook -K ansible/docker-registry.yml -i ansible/inventory/host.yml'
                 }
             }
-        } 
+        }
+	
+
+stage("Grafana") {
+            steps {
+                script{
+                    sh 'ansible-playbook -K ansible/grafana-test.yml -i ansible/inventory/host.yml'
+                }
+            }
+        }
+
+
+
+
+ 
 
   }
 }
