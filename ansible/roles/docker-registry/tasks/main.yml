@@ -5,6 +5,6 @@
 - name: Tag and push to docker hub
   docker_image:
     name: devops
-    repository: anas1412/devops
+    repository: anas1412/test
     push: yes
     source: local
