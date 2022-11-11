@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  roles:
+    - role: 'wangsha.docker-grafana'
+      become: true
