@@ -1,4 +1,13 @@
 ---
+- name: run container node-exporter
+  node_exporter_container:
+   name: node_exporter
+   image: prom/node-exporter:latest
+   state: started
+   recreate: true
+   ports:
+    - "9100:9100"
+    
 - name: run container prometheus
   prometheus_container:
    name: prometheus
@@ -17,11 +26,4 @@
    ports:
     - "3000:3000"
 
-- name: run container node-exporter
-  node_exporter_container:
-   name: node_exporter
-   image: prom/node-exporter:latest
-   state: started
-   recreate: true
-   ports:
-    - "9100:9100"
+
