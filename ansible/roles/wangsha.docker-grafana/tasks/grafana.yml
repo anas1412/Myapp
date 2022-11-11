@@ -29,16 +29,6 @@
     - install
     - upgrade
 
-- name: Remove existing container
-  docker:
-    docker_api_version: "{{ docker_api_version }}"
-    image: "{{ docker_grafana_image }}"
-    name: "{{ docker_grafana_name }}"
-    state: absent
-  tags:
-    - install
-    - upgrade
-
 - name: Run docker grafana container
   become: true
   docker:
