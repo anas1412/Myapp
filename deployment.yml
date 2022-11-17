@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: myappcontainer
-          image: anas1412/devops
+          image: anas1412/devopscloud
 ---
 apiVersion: v1
 kind: Service
